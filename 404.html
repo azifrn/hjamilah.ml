@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>Personal | Dr. Jamilah</title>
+</head>
+<body>
+    <img id="mobile-navtoggle" src="/static/img/assets/menu.svg" alt="menu" onclick="mobileNavToggle();">
+    <h2 id="hjamilah">DR. JAMILAH BINTI HAMID</h2>
+    <div id="navbar" class="mhidden">
+        <div id="loadbar">
+            <div id="loadbar-prog"></div>
+        </div>
+        
+
+        <div id="nav">
+            <div class="navdropdown" id="nav-personal" onclick="">
+                PERSONAL
+                <div class="dropdown-content">
+                  <button onclick="changePage('personal-pinfo',this)">Personal Info</button>
+                  <button onclick="changePage('personal-qualification',this)">Qualification</button>
+                  <button onclick="changePage('personal-workexp',this)">Work Experience</button>
+                </div>
+            </div>
+
+            <div class="navdropdown" id="nav-publication">
+                PUBLICATION
+                <div class="dropdown-content">
+                    <button onclick="changePage('publication-journal',this)">Journal</button>
+                    <button onclick="changePage('publication-book',this)">Book/Chapter in Book</button>
+                    <button onclick="changePage('publication-conference',this)">Conference Proceeding</button>
+                    <button onclick="changePage('publication-module',this)">Module</button>
+                    <button onclick="changePage('publication-exhibition',this)">Exhibition</button>
+                </div>
+            </div>
+
+            <div class="navdropdown" id="nav-teachinglearning">
+                TEACHING & LEARNING
+                <div class="dropdown-content">
+                    <button onclick="changePage('teachinglearning-subject',this)">Subject</button>
+                </div>
+            </div>
+
+            <div class="navdropdown" id="nav-supervision">
+                SUPERVISION
+                <div class="dropdown-content">
+                    <button onclick="changePage('supervision-degreediploma',this)">Degree/Diploma</button>
+                    <button onclick="changePage('supervision-master',this)">Master</button>
+                    <button onclick="changePage('supervision-phd',this)">PHD</button>
+                </div>
+            </div>
+
+            <div class="navdropdown" id="nav-research">
+                RESEARCH
+                <div class="dropdown-content">
+                    <button onclick="changePage('research-lead',this)">Lead</button>
+                    <button onclick="changePage('research-member',this)">Member</button>
+                    <button onclick="changePage('research-innovationip',this)">Innovation & IP</button>
+                </div>
+            </div>
+
+            <div class="navdropdown" id="nav-consultation">
+                CONSULTATION
+                <div class="dropdown-content">
+                    <button onclick="changePage('consultation-paid',this)">Paid</button>
+                    <button onclick="changePage('consultation-unpaid',this)">Unpaid</button>
+                </div>
+            </div>
+
+            <div class="navdropdown" id="nav-acadexcel">
+                ACADEMIC EXCELLENCE
+                <div class="dropdown-content">
+                    <button onclick="changePage('acadexcel-award',this)">Academic Award</button>
+                    <button onclick="changePage('acadexcel-leadership',this)">Academic Leadership/Specialist/Advisory</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="banner-upsi" src="/static/img/upsi.png" alt="upsi" draggable="false">
+    <div id="content"></div>
+    <img id="bgbook" src="/static/img/assets/book.png" alt="book">
+
+    <script src="/static/jquery.js"></script>
+    <script src="/static/nav.js"></script>
+</body>
+</html>
