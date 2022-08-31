@@ -3,11 +3,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/index.css">
+    <link rel="stylesheet" href="/static/index.css">
     <title>Personal | Dr. Jamilah</title>
 </head>
 <body>
-    <img id="mobile-navtoggle" src="static/img/assets/menu.svg" alt="menu" onclick="mobileNavToggle();">
+    <img id="mobile-navtoggle" src="/static/img/assets/menu.svg" alt="menu" onclick="mobileNavToggle();">
     <h2 id="hjamilah">DR. JAMILAH BINTI HAMID</h2>
     <div id="navbar" class="mhidden">
         <div id="loadbar">
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="navdropdown">
+            <div class="navdropdown" id="nav-supervision">
                 SUPERVISION
                 <div class="dropdown-content">
                     <button onclick="changePage('supervision-degreediploma',this)">Degree/Diploma</button>
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="navdropdown">
+            <div class="navdropdown" id="nav-research">
                 RESEARCH
                 <div class="dropdown-content">
                     <button onclick="changePage('research-lead',this)">Lead</button>
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="navdropdown">
+            <div class="navdropdown" id="nav-consultation">
                 CONSULTATION
                 <div class="dropdown-content">
                     <button onclick="changePage('consultation-paid',this)">Paid</button>
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="navdropdown">
+            <div class="navdropdown" id="nav-acadexcel">
                 ACADEMIC EXCELLENCE
                 <div class="dropdown-content">
                     <button onclick="changePage('acadexcel-award',this)">Academic Award</button>
@@ -78,11 +78,11 @@
             </div>
         </div>
     </div>
-    <img id="banner-upsi" src="static/img/upsi.png" alt="upsi" draggable="false">
+    <img id="banner-upsi" src="/static/img/upsi.png" alt="upsi" draggable="false">
     <div id="content"></div>
-    <img id="bgbook" src="static/img/assets/book.png" alt="book">
+    <img id="bgbook" src="/static/img/assets/book.png" alt="book">
 
-    <script src="static/jquery.js"></script>
-    <script src="static/nav.js"></script>
+    <script src="/static/jquery.js"></script>
+    <script src="/static/nav.js"></script>
 </body>
 </html>
