@@ -3,15 +3,85 @@
   currentPageID = "personal-pinfo"
 </script>
 <link rel="stylesheet" href="/static/personal.css" />
+<link rel="stylesheet" href="/static/photoswipe/photoswipe.css">
 
 <div id="gridcontainer">
   <div id="pic-col">
-    <img src="/static/img/pic.jpeg" alt="Dr. Jamilah" id="selfpic" />
+    <img src="/static/img/pic2.png" alt="Dr. Jamilah" id="selfpic" />
   </div>
   <div id="info">
     <span id="name">Dr. Jamilah binti Hamid</span>
     <span id="pos">Senior Lecturer</span>
     <span id="uni">Universiti Pendidikan Sultan Idris</span>
     <span id="email"><img src="/static/img/assets/mail.png" alt="email" draggable="false"></span>
+    <span id="detailed_info"><p><strong>Dr. Jamilah Hamid </strong>is a Senior Lecturer in Faculty of Art, Computing and Creative Industry at Universiti Pendidikan Sultan Idris. She holds a Bachelor of Science in Education (Hons.) majoring in Mathematics and Master of Science (Information Technology). She obtained her PhD in Internet and Web Computing from Universiti Pendidikan Sultan Idris, Malaysia. She has been teaching in high education institutions since 1991 in several subjects such as Programming, Methodology in Courseware Development, Educational Technology Teaching Methodology and Assessment. Her research interests are on Educational Technology using VR, AR and game based, Computational Thinking and Teaching Methodology in Programming. Won a National Book award in technical category for book title Pengaturcaraan Berstruktur C++ (<em>Structure Programming C++)</em> and a few research awards in educational application. Appointed as a panel evaluator by Malaysian Qualifications Agency and university for university programme reviewer. As for publication, published several papers in Educational Technology and Information Technology fields. Appointed as an editor in two journals and active reviewer of a few journals. Currently she is teaching a few educational subjects at the university.</p></span>
+    <span id="cv_link">
+      <a href="https://hjamilah.ml/static/hjamilah_cv.pdf" target="_blank">View Curriculum Vitae</a>
+    </span>
   </div>
 </div>
+
+<div style="width:100%;text-align:center;margin-top:2rem;">
+<div class="pswp-gallery pswp-gallery--single-column" id="gallery">
+</div>
+</div>
+
+<script>
+  images_count=15;
+  data_width = {
+    0:'450',
+    1:'1280',
+    2:'768',
+    3:'768',
+    4:'1080',
+    5:'1040',
+    6:'526',
+    7:'1280',
+    8:'1280',
+    9:'1280',
+    10:'2976',
+    11:'2976',
+    12:'1080',
+    13:'960',
+    14:'960',
+  };
+  data_height = {
+    0:'650',
+    1:'751',
+    2:'1024',
+    3:'1024',
+    4:'810',
+    5:'585',
+    6:'701',
+    7:'960',
+    8:'960',
+    9:'960',
+    10:'3968',
+    11:'3968',
+    12:'810',
+    13:'1280',
+    14:'1280',
+  };
+  for(x=0;x<images_count;x++){
+    $('#gallery').append(
+      `
+      <a href="/static/img/gallery/`+x+`.jpg" 
+      data-pswp-width="`+data_width[x]+`" 
+      data-pswp-height="`+data_height[x]+`" 
+      target="_blank">
+      <img src="/static/img/gallery/`+x+`.jpg" alt="" width="210px" height="100px" style="object-fit:cover;"/>
+      </a>
+      `
+    );
+
+  }
+</script>
+<script type="module">
+  import PhotoSwipeLightbox from '/static/photoswipe/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('/static/photoswipe/photoswipe.esm.js')
+  });
+  lightbox.init();
+  </script>
